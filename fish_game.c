@@ -177,7 +177,7 @@ int main() {
 		HgLine(605,480,550,550);//竿
 		HgLine(550,550,350,250);//糸
 		HgSetFillColor(HG_BLACK); // 白色
-		HgCircleFill(350,250,5, 0); // 餌
+		HgCircleFill(350,250,10, 0); // 餌
 
 		distance_1= sqrt(((x1-350)*(x1-350)) + ((y1-250)*(y1-250)));//魚の口と餌の距離
 		distance_2= sqrt(((x2-350)*(x2-350)) + ((y2-250)*(y2-250)));
@@ -204,7 +204,7 @@ int main() {
 				HgSleep(2.0);
 				break;
 			}else{
-				HgText(300.0, 500.0, "NOT CLEAR");
+				HgText(300.0, 500.0, "逃げられた、NOT CLEAR");
 				HgSetFont(HG_G,200);
 				HgSleep(2.0);
 				break;
@@ -266,6 +266,6 @@ int main() {
 		else
 		leftfish3(x3,y3,r3);
 
-		HgSleep(0.9); // 少し待つ
+		HgSleep(0.1); // 少し待つ
 	}//while
 }
